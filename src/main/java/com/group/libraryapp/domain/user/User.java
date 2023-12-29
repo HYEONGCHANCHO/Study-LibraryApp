@@ -1,9 +1,19 @@
 package com.group.libraryapp.domain.user;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id = null;
+    @Column(nullable = false, length = 20)
     private String name;
+
     private Integer age;
+
+    protected User(){}; //JPA를 사용하기 위해선 기본 생성자가 필요한데 protected로 해도 된다.
 
     public User(String name, Integer age) {
         if (name == null || name.isBlank()) {
