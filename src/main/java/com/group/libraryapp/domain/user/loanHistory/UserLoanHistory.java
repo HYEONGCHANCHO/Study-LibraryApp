@@ -27,4 +27,9 @@ public class UserLoanHistory {
         this.bookName = bookName;
         this.isReturn = false;
     }  //isReturn은 무조건 false기 때문에 생성자에서 지우고 false를 쓰면 깔끔하다고 해서 이렇게 수정함.
+
+    public void doReturn() {
+        this.isReturn = true;
+
+    }
 }
