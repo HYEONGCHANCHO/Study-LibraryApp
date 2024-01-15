@@ -51,5 +51,15 @@ public class User {
         this.name = name;
     }
 
+    public void loanBook(String bookName) {
+        this.userLoanHistories.add(new UserLoanHistory(this, bookName));
+
+    }
+
+    public void returnBook(String bookName) {
+        UserLoanHistory targetHistorry = this.userLoanHistories.stream().filter(history -> history.getBookName().equals(bookName)).findFirst().orElseThrow(IllegalArgumentException::new);
+        targetHistorry.doReturn();
+
+    }
 
 }
