@@ -18,10 +18,10 @@ public class UserJdbcRepository {
 //        return jdbcTemplate.query(readSql, (rs, rowNum) -> 0, id).isEmpty();
 //    }
 
-    public void updatUserName(String name, long id) {
-        String sql = "UPDATE user SET name = ? WHERE id = ?";
-        jdbcTemplate.update(sql, name, id);
-    }
+//    public void updatUserName(String name, long id) {
+//        String sql = "UPDATE user SET name = ? WHERE id = ?";
+//        jdbcTemplate.update(sql, name, id);
+//    }
 
     public boolean isUserNotExist(String name) {
         String readSql = "SELECT * FROM user WHERE name =?";
