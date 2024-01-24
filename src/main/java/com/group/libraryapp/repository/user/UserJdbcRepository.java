@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public class UserJdbcRepository {
-    private final JdbcTemplate jdbcTemplate;
-
-    public UserJdbcRepository(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
+//    private final JdbcTemplate jdbcTemplate;
+//
+//    public UserJdbcRepository(JdbcTemplate jdbcTemplate) {
+//        this.jdbcTemplate = jdbcTemplate;
+//    }
 
 //    public boolean isUserNotExist(long id) {
 //        String readSql = "SELECT * FROM user WHERE id =?";
