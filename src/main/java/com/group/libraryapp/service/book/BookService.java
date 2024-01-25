@@ -39,7 +39,7 @@ public class BookService {
         //2. 대출기록 정보를 확인해서 대출중인지 확인한다.
         //3.확인했는데 대출중이라면 예외를 발생시킨다.
         if (userLoanHistoryRepository.existsByBookNameAndIsReturn(book.getName(), false)) {
-            throw new IllegalArgumentException("진작 대출되어 있는 책입니다.");
+            throw new IllegalArgumentException("이미 대출되어 있는 책입니다.");
         }
 
         //4. 유저 정보를 가져온다.
